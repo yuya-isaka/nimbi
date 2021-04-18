@@ -50,10 +50,11 @@ proc bilinear(d: var seq[seq[float]]) =
     break
 
 proc main() =
-  # stdout.write "\nfile-name> "
-  # let fileName = readLine(stdin)
   #!データ入力
-  let fileName = "data.csv"
+  stdout.write "\nfile-name> "
+  let fileName = readLine(stdin)
+
+  # let fileName = "data.csv"
   var data = newSeq[seq[string]]()
   var p: CsvParser
   p.open(fmt"./{fileName}")
